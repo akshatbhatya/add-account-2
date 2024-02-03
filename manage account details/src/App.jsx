@@ -3,24 +3,24 @@ import Login from "./Components/Login"
 import AccountPage from "./Components/AccountPage"
 function App() {
 
-  // let appRoute=createBrowserRouter([{
-  //   path:"",
-  //   element:<Login/>,
-  //   errorElement:<>something went wrong</>,
-  //   children:[
-  //     {
-  //       path:"/",
-  //       element:<Login/>
-  //     }
+  let appRoute=createBrowserRouter([{
+   path:"",
+   element:<Login/>,
+   errorElement:<>something went wrong</>,
+   children:[
+     {
+       path:"/",
+       element:<Login/>
+     }
       
-  //   ]
-  // }])
-  // return (
+   ]
+ }])
+ return (
 
-  //   <RouterProvider router={appRoute}/>
-  // )
+   <RouterProvider router={appRoute}/>
+ )
 
-  <AccountPage/>
+  
   
 }
 
