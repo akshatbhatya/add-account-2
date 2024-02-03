@@ -22,11 +22,18 @@ let AccountSlice=createSlice({
             removeAccount:(state,action)=>{
                state.account= state.account.filter((dataId)=>dataId.id!==action.payload)
             },
-            updateAccount:(state,action)=>{
-                state.account = state.account.map((dataId) =>
+        //     updateAccount:(state,action)=>{
+        //         state.account = state.account.map((dataId) =>
+        //         dataId.id === action.payload.id ? { ...dataId, ...action.payload } : dataId
+        //     );
+        // }
+        updateAccount: (state, action) => {
+            console.log("Update action dispatched:", action);
+            state.account = state.account.map((dataId) =>
                 dataId.id === action.payload.id ? { ...dataId, ...action.payload } : dataId
             );
         }
+        
             }
             
 
