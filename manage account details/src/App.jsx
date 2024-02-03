@@ -1,27 +1,29 @@
-import {Router, RouterProvider, createBrowserRouter} from "react-router-dom"
+import { RouterProvider, createBrowserRouter} from "react-router-dom"
 import Login from "./Components/Login"
 import AccountPage from "./Components/AccountPage"
 function App() {
 
-  let appRoute=createBrowserRouter([{
-   path:"",
-   element:<Login/>,
-   errorElement:<>something went wrong</>,
-   children:[
-     {
-       path:"/",
-       element:<Login/>
-     }
-      
-   ]
- }])
- return (
+  let routerOfElement = createBrowserRouter([
+    {
+        path: "/",
+        element: <Login/>,
+        errorElement:<>page not Found</>
+    },
+    {
+      path: "/account",
+      element: <AccountPage />,
+      errorElement:<>page not Found</>
+  }
 
-   <RouterProvider router={appRoute}/>
- )
-
+    
+])
+  return (
+    <>
+    
+    <RouterProvider router={routerOfElement}/>
   
-  
+    </>
+  )
 }
 
 export default App

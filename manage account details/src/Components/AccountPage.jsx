@@ -4,7 +4,7 @@ function AccountPage() {
   return (
     <div>
       
-      account page
+      <h2>account page</h2>
     </div>
   )
 }
