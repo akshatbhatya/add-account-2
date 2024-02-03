@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
 import Validation from './Validation';
+import { useDispatch } from 'react-redux';
+import { addAccountDetail } from './Store/AccountSlice';
+import { useNavigate } from 'react-router-dom';
+
 
 function Login() {
+    let dispatch = useDispatch()
+    let navigate = useNavigate()
+
+
 
     let initialData = {
         fullname: "",
@@ -24,6 +32,10 @@ function Login() {
         e.preventDefault()
         let message = Validation(value.email, value.password, value.number);
         setError(message)
+        let ourData = ({ id: Date.now(), ...value })
+        dispatch(addAccountDetail(ourData))
+        navigate("/account")
+
     }
     return (
         <div className='flex justify-center items-center mt-40'>
@@ -60,6 +72,8 @@ function Login() {
                 <br />
                 <button className='bg-green-700 text-white rounded-sm px-3' type='Submit'>Submit</button>
             </form>
+
+
 
         </div>
     )

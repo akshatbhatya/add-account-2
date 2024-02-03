@@ -1,29 +1,33 @@
-import { RouterProvider, createBrowserRouter} from "react-router-dom"
-import Login from "./Components/Login"
 import AccountPage from "./Components/AccountPage"
+import Login from "./Components/Login"
+import Store from "./Components/Store/Store"
+import { Provider } from "react-redux"
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+
 function App() {
 
-  let routerOfElement = createBrowserRouter([
+
+  let routerpage = createBrowserRouter([
     {
-        path: "/",
-        element: <Login/>,
-        errorElement:<>page not Found</>
+      path: "/",
+      element: <Login />,
+      errorElement: <>no Page Found </>
     },
     {
       path: "/account",
       element: <AccountPage />,
-      errorElement:<>page not Found</>
-  }
+      errorElement: <>no Page Found </>
+    }
 
-    
-])
+  ])
   return (
-    <>
-    
-    <RouterProvider router={routerOfElement}/>
-  
-    </>
+    <Provider store={Store}>
+      <RouterProvider router={routerpage} />
+    </Provider>
   )
+
+
 }
 
 export default App
