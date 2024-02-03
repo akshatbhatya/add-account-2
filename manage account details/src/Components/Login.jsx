@@ -17,8 +17,7 @@ function Login() {
 
     let changeEvent = (e) => {
         let target = e.target;
-        setValue((prev) => ({ ...prev, [target.name]: target.value }))
-        console.log(value);
+        setValue((prev) => ({ ...prev, [target.name]: target.value }));
 
     }
     let handleForm = (e) => {
