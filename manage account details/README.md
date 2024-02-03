@@ -1,8 +1,26 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# logIn Page 
+  - input Fields 
+    - full name
+    - Email
+    - number
+    - password
 
-Currently, two official plugins are available:
+      # login field with validation 
+       - email validation 
+       - number validation 
+       - password validation 
+    
+     # Add Router configuration To link button to Account Page
+       
+     # add Redux store 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+      - add Account to store 
+      - updateAccount To store 
+      - Delete Account To store
+    
+    # using tailwind for styling 
+     
+
+
